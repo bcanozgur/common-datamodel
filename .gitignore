@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 maven-wrapper.jar
 
+.DS_Store
 
 ### STS ###
 .apt_generated
