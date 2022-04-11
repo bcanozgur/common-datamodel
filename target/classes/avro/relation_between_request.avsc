@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "RelationBetweenRequestAvro",
+  "namespace": "com.yaay.backend.model.avro",
+  "fields": [
+    {
+      "name": "user1Id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "user2Id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
+}

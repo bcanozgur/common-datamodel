@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "TimelineResponseAvro",
+  "namespace": "com.yaay.backend.model.avro",
+  "fields": [
+    {
+      "name": "size",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "pagingState",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "elements",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items":{
+            "name":"TimelineItemDTOAvro",
+            "type":"record",
+            "fields":[
+              {
+                "name":"postID",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    }
+  ]
+}

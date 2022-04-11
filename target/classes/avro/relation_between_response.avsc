@@ -1,0 +1,52 @@
+{
+  "type": "record",
+  "name": "RelationBetweenResponseAvro",
+  "namespace": "com.yaay.backend.model.avro",
+  "fields": [
+    {
+      "name": "user1to2",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "RelationsAvro",
+          "fields": [
+            {
+              "name": "blocked",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            },
+            {
+              "name": "follows",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            },
+            {
+              "name": "muted",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default":null
+    },
+    {
+      "name": "user2to1",
+      "type": [
+        "null",
+        "com.yaay.backend.model.avro.RelationsAvro"
+      ],
+      "default":null
+    }
+  ]
+}

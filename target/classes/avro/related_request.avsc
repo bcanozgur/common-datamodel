@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "name": "RelatedRequestAvro",
+  "namespace": "com.yaay.backend.model.avro",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "query",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "QueryAvro",
+          "symbols": [
+            "MUTED",
+            "MUTED_BY",
+            "FOLLOWERS",
+            "FOLLOWING",
+            "BLOCKED",
+            "BLOCKED_BY",
+            "WHITELISTED_FOLLOWERS"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "pagingState",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "limit",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    }
+  ]
+}

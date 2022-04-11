@@ -1,0 +1,58 @@
+{
+  "type": "record",
+  "name": "RelevancyResponseAvro",
+  "namespace": "com.yaay.backend.model.avro",
+  "fields": [
+    {
+      "name": "size",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "pagingState",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "elements",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items":{
+            "name":"UserDTOAvro",
+            "type":"record",
+            "fields":[
+              {
+                "name":"userId",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name":"since",
+                "type": [
+                  "null",
+                  {
+                    "type": "long",
+                    "logicalType": "timestamp-millis"
+                  }
+                ],
+                "default": null
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    }
+  ]
+}
